@@ -1,7 +1,8 @@
 extends base.pug
-
-block head
-    title Home | Wetube
+include mixins/video.pug
 
 block content
-    h1 Home!
+    h2 Welcome! Here are the Trending Videos
+    ul
+        each item in videos
+            +video(item)
